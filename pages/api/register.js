@@ -29,7 +29,6 @@ export default function handler(req, res) {
   error += nullHandling(validatePhone(phone));
 
   if (error.trim() != "") {
-    console.log(error);
     res.status(401).json({ message: error });
     return;
   }
