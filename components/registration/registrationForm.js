@@ -44,16 +44,12 @@ function RegistrationForm(props) {
     fetch("/api/register", {
       method: "POST",
       body: JSON.stringify({
-        // name: name,
-        // email: email,
-        // phone: phone,
-        name: null,
-        email: null,
-        phone: null,
+        name: name,
+        email: email,
+        phone: phone,
       }),
     })
       .then((res) => {
-        console.log(res);
         if (res.ok) {
           setSuccess(true);
           dispatch(
